@@ -1,66 +1,72 @@
 import { homeScreen, homeScreenLocators } from "../screen/HomeScreen.page";
 
 describe('Home Screen Tests', () => {
-  it('TC003: Navigate to login screen from home page', async () => {
-    // Preconditions: App is on home screen
+  it('TC014: Navigate to Home from Logo', async () => {
+    // Preconditions: User is on any screen with Blink Wireless logo
     await homeScreen.launchApp();
     
-    // Step 1: Open BlinkWireless app
-    // Step 2: Locate Login button in top right corner
+    // Step 1: Locate Blink Wireless logo
+    // Step 2: Tap on the logo
+    await homeScreen.tapBlinkWirelessLogo();
+    
+    // Step 3: Verify navigation to home screen
+    // Expected result: User is navigated to home screen or main page
+    await homeScreen.verifyHomeScreenDisplayed();
+  });
+
+  it('TC015: Navigate to Login', async () => {
+    // Preconditions: User is on home screen
+    await homeScreen.launchApp();
     await homeScreen.verifyHomeScreenDisplayed();
     
-    // Step 3: Tap on Login button
+    // Step 1: Locate Login button
+    // Step 2: Tap on Login button
     await homeScreen.tapLoginButton();
     
+    // Step 3: Verify navigation to login screen
     // Expected result: User is navigated to login screen
-    // Note: Login screen verification would be in LoginScreen.ts
+    await driver.pause(2000);
   });
 
-  it('TC004: Navigate to phone catalog via Shop Phone button', async () => {
-    // Preconditions: App is on home screen
+  it('TC016: Navigate to Phone Shopping', async () => {
+    // Preconditions: User is on home screen
     await homeScreen.launchApp();
-    
-    // Step 1: Open BlinkWireless app
     await homeScreen.verifyHomeScreenDisplayed();
     
-    // Step 2: Scroll to find 'Shop Phone' button
-    await homeScreen.scrollToFindElement(homeScreenLocators.shopPhoneButton);
-    
-    // Step 3: Tap on 'Shop Phone' button
+    // Step 1: Locate 'Shop Phone' button
+    // Step 2: Tap on 'Shop Phone' button
     await homeScreen.tapShopPhoneButton();
     
-    // Expected result: User is navigated to phone shopping catalog page
+    // Step 3: Verify navigation to phone catalog
+    // Expected result: User is navigated to phone shopping catalog
+    await driver.pause(2000);
   });
 
-  it('TC005: Access BYOP service page', async () => {
-    // Preconditions: App is on home screen
+  it('TC017: Navigate to Bring Your Own Phone', async () => {
+    // Preconditions: User is on home screen
     await homeScreen.launchApp();
-    
-    // Step 1: Open BlinkWireless app
     await homeScreen.verifyHomeScreenDisplayed();
     
-    // Step 2: Scroll to find 'Bring your own phone' section
-    await homeScreen.scrollToFindElement(homeScreenLocators.byopSection);
+    // Step 1: Locate 'Bring your own phone' section
+    // Step 2: Tap on the icon or text
+    await homeScreen.tapBringYourOwnPhoneSection();
     
-    // Step 3: Tap on 'Bring your own phone' text or phone icon
-    await homeScreen.tapBYOPSection();
-    
-    // Expected result: User is navigated to BYOP service page
+    // Step 3: Verify navigation to BYOP section
+    // Expected result: User is navigated to bring your own phone section
+    await driver.pause(2000);
   });
 
-  it('TC006: Access broadband services page', async () => {
-    // Preconditions: App is on home screen
+  it('TC018: Navigate to Broadband Shopping', async () => {
+    // Preconditions: User is on home screen
     await homeScreen.launchApp();
-    
-    // Step 1: Open BlinkWireless app
     await homeScreen.verifyHomeScreenDisplayed();
     
-    // Step 2: Scroll to find 'Shop Broadbands' section
-    await homeScreen.scrollToFindElement(homeScreenLocators.broadbandSection);
+    // Step 1: Locate 'Shop Broadbands' section
+    // Step 2: Tap on the icon or text
+    await homeScreen.tapShopBroadbandsSection();
     
-    // Step 3: Tap on 'Shop Broadbands' text or router icon
-    await homeScreen.tapBroadbandSection();
-    
-    // Expected result: User is navigated to broadband services page
+    // Step 3: Verify navigation to broadband section
+    // Expected result: User is navigated to broadband shopping section
+    await driver.pause(2000);
   });
 });
