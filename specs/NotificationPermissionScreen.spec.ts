@@ -1,7 +1,7 @@
 import { notificationPermissionScreen, notificationPermissionLocators } from "../screen/NotificationPermissionScreen.page";
 
 describe('Notification Permission Screen Tests', () => {
-  it('TC001: Grant notification permission - Allow button', async () => {
+  it('TC049: Grant notification permission - Allow button', async () => {
     // Preconditions: BlinkWireless app is installed, Notification permission dialog is displayed
     await notificationPermissionScreen.launchApp();
     
@@ -16,7 +16,7 @@ describe('Notification Permission Screen Tests', () => {
     await notificationPermissionScreen.verifyPermissionDialogClosed();
   });
 
-  it('TC002: Deny notification permission - Don\'t allow button', async () => {
+  it('TC050: Deny notification permission - Don\'t allow button', async () => {
     // Preconditions: BlinkWireless app is installed, Notification permission dialog is displayed
     await notificationPermissionScreen.launchApp();
     

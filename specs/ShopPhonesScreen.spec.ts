@@ -1,7 +1,7 @@
 import { shopPhonesScreen, shopPhonesLocators } from "../screen/ShopPhonesScreen.page";
 
 describe('Shop Phones Screen Tests', () => {
-  it('TC009: Phone color selection functionality', async () => {
+  it('TC112: Phone color selection functionality', async () => {
     // Preconditions: User is on the Shop Phones screen
     await shopPhonesScreen.navigateToShopPhones();
     await shopPhonesScreen.verifyShopPhonesScreenDisplayed();
@@ -25,7 +25,7 @@ describe('Shop Phones Screen Tests', () => {
     // Expected result: Color selection changes appropriately and visual feedback is provided
   });
 
-  it('TC010: Back navigation from Shop Phones screen', async () => {
+  it('TC113: Back navigation from Shop Phones screen', async () => {
     // Preconditions: User is on the Shop Phones screen
     await shopPhonesScreen.navigateToShopPhones();
     await shopPhonesScreen.verifyShopPhonesScreenDisplayed();
@@ -39,7 +39,7 @@ describe('Shop Phones Screen Tests', () => {
     // Expected result: User is navigated back to the previous screen successfully
   });
 
-  it('TC011: Product detail view navigation', async () => {
+  it('TC114: Product detail view navigation', async () => {
     // Preconditions: User is on the Shop Phones screen
     await shopPhonesScreen.navigateToShopPhones();
     await shopPhonesScreen.verifyShopPhonesScreenDisplayed();

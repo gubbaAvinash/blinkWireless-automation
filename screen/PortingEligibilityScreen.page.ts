@@ -1,4 +1,4 @@
-import { portingEligibilityLocators } from "./PortingEligibilityScreen.page";
+// import { portingEligibilityLocators } from "./PortingEligibilityScreen.page";
 
 const portingEligibilityLocators = {
   pageTitle: () => $('~mobile_navbar1_title'),

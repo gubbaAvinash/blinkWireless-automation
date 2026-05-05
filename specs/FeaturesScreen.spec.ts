@@ -1,7 +1,7 @@
 import { featuresScreen, featuresScreenLocators } from "../screen/FeaturesScreen.page";
 
 describe('Features Screen Tests', () => {
-  it('TC019: Verify product feature interaction', async () => {
+  it('TC036: Verify product feature interaction', async () => {
     // Preconditions: User is on Features tab with feature list visible
     await featuresScreen.navigateToFeaturesTab();
     

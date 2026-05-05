@@ -1,5 +1,3 @@
-import { productDetailLocators } from "./ProductDetailScreen.page";
-
 const productDetailLocators = {
   backArrow: () => $('~mobile_navbar1_backbtn_a'),
   xperiaHeading: () => $('~mobile_navbar1_title'),

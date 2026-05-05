@@ -1,7 +1,7 @@
 import { addressScreen, addressScreenLocators } from "../screen/AddressScreen.page";
 
 describe('Address Screen Tests', () => {
-  it('TC001: Navigate back using back arrow button', async () => {
+  it('TC010: Navigate back using back arrow button', async () => {
     // Preconditions: User is on step 5/6 of the address form
     await addressScreen.navigateToAddressScreen();
     
@@ -14,7 +14,7 @@ describe('Address Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC002: Cancel order process', async () => {
+  it('TC011: Cancel order process', async () => {
     // Preconditions: User is in the address entry screen
     await addressScreen.navigateToAddressScreen();
     
@@ -27,7 +27,7 @@ describe('Address Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC003: Enter valid address in Address Line 1', async () => {
+  it('TC012: Enter valid address in Address Line 1', async () => {
     // Preconditions: Address form is displayed
     await addressScreen.navigateToAddressScreen();
     
@@ -41,7 +41,7 @@ describe('Address Screen Tests', () => {
     await addressScreen.verifyFieldValue('address1', '123 Main Street');
   });
 
-  it('TC004: Enter special characters in Address Line 1', async () => {
+  it('TC013: Enter special characters in Address Line 1', async () => {
     // Preconditions: Address form is displayed
     await addressScreen.navigateToAddressScreen();
     
@@ -55,7 +55,7 @@ describe('Address Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC005: Leave Address Line 1 empty', async () => {
+  it('TC014: Leave Address Line 1 empty', async () => {
     // Preconditions: Address form is displayed
     await addressScreen.navigateToAddressScreen();
     
@@ -71,7 +71,7 @@ describe('Address Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC006: Enter valid city name', async () => {
+  it('TC015: Enter valid city name', async () => {
     // Preconditions: Address form is displayed
     await addressScreen.navigateToAddressScreen();
     
@@ -85,7 +85,7 @@ describe('Address Screen Tests', () => {
     await addressScreen.verifyFieldValue('city', 'New York');
   });
 
-  it('TC007: Enter numeric characters in city field', async () => {
+  it('TC016: Enter numeric characters in city field', async () => {
     // Preconditions: Address form is displayed
     await addressScreen.navigateToAddressScreen();
     
@@ -99,7 +99,7 @@ describe('Address Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC008: Enter valid ZIP code', async () => {
+  it('TC017: Enter valid ZIP code', async () => {
     // Preconditions: Address form is displayed
     await addressScreen.navigateToAddressScreen();
     
@@ -113,7 +113,7 @@ describe('Address Screen Tests', () => {
     await addressScreen.verifyFieldValue('zip', '90210');
   });
 
-  it('TC009: Enter invalid ZIP code format', async () => {
+  it('TC018: Enter invalid ZIP code format', async () => {
     // Preconditions: Address form is displayed
     await addressScreen.navigateToAddressScreen();
     
@@ -130,7 +130,7 @@ describe('Address Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC010: Select state from dropdown', async () => {
+  it('TC019: Select state from dropdown', async () => {
     // Preconditions: Address form is displayed, State dropdown is available
     await addressScreen.navigateToAddressScreen();
     
@@ -144,7 +144,7 @@ describe('Address Screen Tests', () => {
     await addressScreen.verifyFieldValue('state', 'Texas');
   });
 
-  it('TC011: Proceed without selecting state', async () => {
+  it('TC020: Proceed without selecting state', async () => {
     // Preconditions: Address form is displayed, No state is selected
     await addressScreen.navigateToAddressScreen();
     
@@ -162,7 +162,7 @@ describe('Address Screen Tests', () => {
     await addressScreen.verifyStateErrorMessage();
   });
 
-  it('TC012: Complete address form with valid data', async () => {
+  it('TC021: Complete address form with valid data', async () => {
     // Preconditions: Address form is displayed
     await addressScreen.navigateToAddressScreen();
     
@@ -184,7 +184,7 @@ describe('Address Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC013: View order details', async () => {
+  it('TC022: View order details', async () => {
     // Preconditions: Address form is displayed, Order details section is visible
     await addressScreen.navigateToAddressScreen();
     
@@ -197,7 +197,7 @@ describe('Address Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC014: Verify order total display', async () => {
+  it('TC023: Verify order total display', async () => {
     // Preconditions: Address form is displayed
     await addressScreen.navigateToAddressScreen();
     
@@ -208,7 +208,7 @@ describe('Address Screen Tests', () => {
     await addressScreen.verifyOrderTotal('$1,091.00');
   });
 
-  it('TC015: Long press on address fields', async () => {
+  it('TC024: Long press on address fields', async () => {
     // Preconditions: Address form is displayed
     await addressScreen.navigateToAddressScreen();
     
@@ -225,7 +225,7 @@ describe('Address Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC016: Maximum character limit for address fields', async () => {
+  it('TC025: Maximum character limit for address fields', async () => {
     // Preconditions: Address form is displayed
     await addressScreen.navigateToAddressScreen();
     
@@ -239,7 +239,7 @@ describe('Address Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC017: Progress indicator accuracy', async () => {
+  it('TC026: Progress indicator accuracy', async () => {
     // Preconditions: User is on address entry step
     await addressScreen.navigateToAddressScreen();
     
@@ -261,7 +261,7 @@ describe('Address Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC018: Clear individual address fields', async () => {
+  it('TC027: Clear individual address fields', async () => {
     // Preconditions: Address form is displayed with pre-filled data
     await addressScreen.navigateToAddressScreen();
     
@@ -279,7 +279,7 @@ describe('Address Screen Tests', () => {
     // Expected result: Each field should be successfully cleared when using clear functionality
   });
 
-  it('TC019: State dropdown keyboard navigation', async () => {
+  it('TC028: State dropdown keyboard navigation', async () => {
     // Preconditions: Address form is displayed, External keyboard connected
     await addressScreen.navigateToAddressScreen();
     
@@ -295,7 +295,7 @@ describe('Address Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC020: Form persistence on navigation', async () => {
+  it('TC029: Form persistence on navigation', async () => {
     // Preconditions: Address form is displayed
     await addressScreen.navigateToAddressScreen();
     

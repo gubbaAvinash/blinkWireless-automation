@@ -1,7 +1,10 @@
-import { validationScreen, validationScreenLocators } from "../screen/ValidationScreen.page";
+import { addOnsScreen } from '../screen/AddOnsScreen.page';
+import { personalDetailsScreen, personalDetailsScreenLocators } from '../screen/PersonalDetailsScreen.page';
+import { simTypeScreen, simTypeScreenLocators } from '../screen/SimTypeScreen.page';
+import { validationScreen, validationScreenLocators } from '../screen/ValidationScreen.page';
 
 describe('Validation Screen Tests', () => {
-  it('TC021: Verify price display consistency', async () => {
+  it('TC120: Verify price display consistency', async () => {
     // Preconditions: User has selected add-ons and navigated through screens
     await addOnsScreen.launchApp();
     
@@ -26,7 +29,7 @@ describe('Validation Screen Tests', () => {
     await expect(simTypePrice).toEqual(personalDetailsPrice);
   });
 
-  it('TC022: Verify progress indicator updates', async () => {
+  it('TC121: Verify progress indicator updates', async () => {
     // Preconditions: User is in wizard flow
     await addOnsScreen.launchApp();
     
@@ -47,7 +50,7 @@ describe('Validation Screen Tests', () => {
     await expect(personalDetailsScreenLocators.progressIndicator()).toHaveText('4/6');
   });
 
-  it('TC025: Verify error message display for zip code validation', async () => {
+  it('TC122: Verify error message display for zip code validation', async () => {
     // Preconditions: User is on a screen with zip code field, Invalid zip code is entered
     await validationScreen.navigateToValidationScreen();
     

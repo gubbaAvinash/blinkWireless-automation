@@ -1,7 +1,8 @@
-import { numberPortabilityScreen, numberPortabilityLocators } from "../screen/NumberPortabilityScreen.page";
+import { mainScreen } from '../screen/MainScreen.page';
+import { numberPortabilityScreen, numberPortabilityLocators } from '../screen/NumberPortabilityScreen.page';
 
 describe('Number Portability Screen Tests', () => {
-  it('TC007: Enter valid mobile number for portability check', async () => {
+  it('TC051: Enter valid mobile number for portability check', async () => {
     // Preconditions: Number portability screen is displayed
     await numberPortabilityScreen.navigateToNumberPortability();
     
@@ -14,7 +15,7 @@ describe('Number Portability Screen Tests', () => {
     await numberPortabilityScreen.verifyMobileNumberDisplayed('5551234567');
   });
 
-  it('TC008: Enter invalid mobile number format', async () => {
+  it('TC052: Enter invalid mobile number format', async () => {
     // Preconditions: Number portability screen is displayed
     await numberPortabilityScreen.navigateToNumberPortability();
     
@@ -28,7 +29,7 @@ describe('Number Portability Screen Tests', () => {
     await numberPortabilityScreen.verifyErrorMessageDisplayed();
   });
 
-  it('TC009: Enter valid zip code for service area check', async () => {
+  it('TC053: Enter valid zip code for service area check', async () => {
     // Preconditions: Number portability screen is displayed
     await numberPortabilityScreen.navigateToNumberPortability();
     
@@ -41,7 +42,7 @@ describe('Number Portability Screen Tests', () => {
     await numberPortabilityScreen.verifyZipCodeDisplayed('12345');
   });
 
-  it('TC010: Enter invalid zip code format', async () => {
+  it('TC054: Enter invalid zip code format', async () => {
     // Preconditions: Number portability screen is displayed
     await numberPortabilityScreen.navigateToNumberPortability();
     
@@ -55,7 +56,7 @@ describe('Number Portability Screen Tests', () => {
     await numberPortabilityScreen.verifyErrorMessageDisplayed();
   });
 
-  it('TC011: Check eligibility with valid data', async () => {
+  it('TC055: Check eligibility with valid data', async () => {
     // Preconditions: Number portability screen is displayed
     await numberPortabilityScreen.navigateToNumberPortability();
     
@@ -72,7 +73,7 @@ describe('Number Portability Screen Tests', () => {
     // Note: Results screen verification would be implemented in EligibilityResultsScreen.ts
   });
 
-  it('TC012: Check eligibility with empty fields', async () => {
+  it('TC056: Check eligibility with empty fields', async () => {
     // Preconditions: Number portability screen is displayed
     await numberPortabilityScreen.navigateToNumberPortability();
     
@@ -85,7 +86,7 @@ describe('Number Portability Screen Tests', () => {
     await numberPortabilityScreen.verifyErrorMessageDisplayed();
   });
 
-  it('TC013: Skip SIM portability process', async () => {
+  it('TC057: Skip SIM portability process', async () => {
     // Preconditions: Number portability screen is displayed
     await numberPortabilityScreen.navigateToNumberPortability();
     
@@ -98,7 +99,7 @@ describe('Number Portability Screen Tests', () => {
     // Note: Next screen verification would be implemented in the appropriate screen file
   });
 
-  it('TC014: Close current screen using close button', async () => {
+  it('TC058: Close current screen using close button', async () => {
     // Preconditions: Any screen with close button is displayed
     await numberPortabilityScreen.navigateToNumberPortability();
     
@@ -111,7 +112,7 @@ describe('Number Portability Screen Tests', () => {
     await mainScreen.verifyMainScreenDisplayed();
   });
 
-  it('TC015: Long press on mobile number field', async () => {
+  it('TC059: Long press on mobile number field', async () => {
     // Preconditions: Number portability screen is displayed, Mobile number field contains text
     await numberPortabilityScreen.navigateToNumberPortability();
     await numberPortabilityScreen.enterMobileNumber('123456789');
@@ -125,7 +126,7 @@ describe('Number Portability Screen Tests', () => {
     await numberPortabilityScreen.verifyContextMenuDisplayed();
   });
 
-  it('TC016: Long press on zip code field', async () => {
+  it('TC060: Long press on zip code field', async () => {
     // Preconditions: Number portability screen is displayed, Zip code field contains text
     await numberPortabilityScreen.navigateToNumberPortability();
     await numberPortabilityScreen.enterZipCode('12345');
@@ -139,7 +140,7 @@ describe('Number Portability Screen Tests', () => {
     await numberPortabilityScreen.verifyContextMenuDisplayed();
   });
 
-  it('TC017: Maximum character limit in mobile number field', async () => {
+  it('TC061: Maximum character limit in mobile number field', async () => {
     // Preconditions: Number portability screen is displayed
     await numberPortabilityScreen.navigateToNumberPortability();
     
@@ -153,7 +154,7 @@ describe('Number Portability Screen Tests', () => {
     expect(actualValue.length).toBeLessThanOrEqual(10);
   });
 
-  it('TC018: Maximum character limit in zip code field', async () => {
+  it('TC062: Maximum character limit in zip code field', async () => {
     // Preconditions: Number portability screen is displayed
     await numberPortabilityScreen.navigateToNumberPortability();
     

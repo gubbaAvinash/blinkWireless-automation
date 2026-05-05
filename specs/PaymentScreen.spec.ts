@@ -1,7 +1,7 @@
 import { paymentScreen, paymentScreenLocators } from "../screen/PaymentScreen.page";
 
 describe('Payment Screen Tests', () => {
-  it('TC001: Verify Payment Screen Display', async () => {
+  it('TC063: Verify Payment Screen Display', async () => {
     // Preconditions: User has navigated to payment screen, Payment process is at step 6/6
     await paymentScreen.navigateToPaymentScreen();
     
@@ -14,7 +14,7 @@ describe('Payment Screen Tests', () => {
     await paymentScreen.verifyCardFormDisplayed();
   });
 
-  it('TC002: Cancel Payment Process', async () => {
+  it('TC064: Cancel Payment Process', async () => {
     // Preconditions: User is on payment screen
     await paymentScreen.navigateToPaymentScreen();
     
@@ -27,7 +27,7 @@ describe('Payment Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC003: Switch to Card Payment Method', async () => {
+  it('TC065: Switch to Card Payment Method', async () => {
     // Preconditions: User is on payment screen
     await paymentScreen.navigateToPaymentScreen();
     
@@ -40,7 +40,7 @@ describe('Payment Screen Tests', () => {
     await paymentScreen.verifyCardFormDisplayed();
   });
 
-  it('TC004: Switch to PayPal Payment Method', async () => {
+  it('TC066: Switch to PayPal Payment Method', async () => {
     // Preconditions: User is on payment screen
     await paymentScreen.navigateToPaymentScreen();
     
@@ -53,7 +53,7 @@ describe('Payment Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC005: Edit Card Holder Name - Valid Input', async () => {
+  it('TC067: Edit Card Holder Name - Valid Input', async () => {
     // Preconditions: User is on payment screen, Card tab is selected
     await paymentScreen.navigateToPaymentScreen();
     await paymentScreen.tapCardTab();
@@ -68,7 +68,7 @@ describe('Payment Screen Tests', () => {
     await expect(paymentScreenLocators.cardHolderNameField()).toHaveText('John Doe');
   });
 
-  it('TC006: Edit Card Holder Name - Special Characters', async () => {
+  it('TC068: Edit Card Holder Name - Special Characters', async () => {
     // Preconditions: User is on payment screen, Card tab is selected
     await paymentScreen.navigateToPaymentScreen();
     await paymentScreen.tapCardTab();
@@ -83,7 +83,7 @@ describe('Payment Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC007: Edit Card Number - Valid Format', async () => {
+  it('TC069: Edit Card Number - Valid Format', async () => {
     // Preconditions: User is on payment screen, Card tab is selected
     await paymentScreen.navigateToPaymentScreen();
     await paymentScreen.tapCardTab();
@@ -98,7 +98,7 @@ describe('Payment Screen Tests', () => {
     await expect(paymentScreenLocators.cardNumberField()).toHaveText('4111-1111-1111-1111');
   });
 
-  it('TC008: Edit Card Number - Invalid Format', async () => {
+  it('TC070: Edit Card Number - Invalid Format', async () => {
     // Preconditions: User is on payment screen, Card tab is selected
     await paymentScreen.navigateToPaymentScreen();
     await paymentScreen.tapCardTab();
@@ -113,7 +113,7 @@ describe('Payment Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC009: Edit Expiry Date - Valid Format', async () => {
+  it('TC071: Edit Expiry Date - Valid Format', async () => {
     // Preconditions: User is on payment screen, Card tab is selected
     await paymentScreen.navigateToPaymentScreen();
     await paymentScreen.tapCardTab();
@@ -128,7 +128,7 @@ describe('Payment Screen Tests', () => {
     await expect(paymentScreenLocators.expiryDateField()).toHaveText('12/25');
   });
 
-  it('TC010: Edit Expiry Date - Past Date', async () => {
+  it('TC072: Edit Expiry Date - Past Date', async () => {
     // Preconditions: User is on payment screen, Card tab is selected
     await paymentScreen.navigateToPaymentScreen();
     await paymentScreen.tapCardTab();
@@ -143,7 +143,7 @@ describe('Payment Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC011: Edit Expiry Date - Invalid Format', async () => {
+  it('TC073: Edit Expiry Date - Invalid Format', async () => {
     // Preconditions: User is on payment screen, Card tab is selected
     await paymentScreen.navigateToPaymentScreen();
     await paymentScreen.tapCardTab();
@@ -158,7 +158,7 @@ describe('Payment Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC012: Long Press on Card Fields', async () => {
+  it('TC074: Long Press on Card Fields', async () => {
     // Preconditions: User is on payment screen, Card tab is selected
     await paymentScreen.navigateToPaymentScreen();
     await paymentScreen.tapCardTab();
@@ -178,7 +178,7 @@ describe('Payment Screen Tests', () => {
     await driver.pause(1000);
   });
 
-  it('TC013: Clear Card Fields', async () => {
+  it('TC075: Clear Card Fields', async () => {
     // Preconditions: User is on payment screen, Card fields contain data
     await paymentScreen.navigateToPaymentScreen();
     await paymentScreen.tapCardTab();

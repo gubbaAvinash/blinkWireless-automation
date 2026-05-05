@@ -1,7 +1,7 @@
 import { portingEligibilityScreen, portingEligibilityLocators } from "../screen/PortingEligibilityScreen.page";
 
 describe('Porting Check Eligibility Screen Tests', () => {
-  it('TC001: Valid phone number entry for porting eligibility check', async () => {
+  it('TC086: Valid phone number entry for porting eligibility check', async () => {
     // Preconditions: User is on the Porting Check Eligibility screen
     await portingEligibilityScreen.launchApp();
     await portingEligibilityScreen.verifyPortingEligibilityScreenDisplayed();
@@ -23,7 +23,7 @@ describe('Porting Check Eligibility Screen Tests', () => {
     expect(phoneValue).toBe('9876543210');
   });
 
-  it('TC002: Invalid phone number entry validation', async () => {
+  it('TC087: Invalid phone number entry validation', async () => {
     // Preconditions: User is on the Porting Check Eligibility screen
     await portingEligibilityScreen.launchApp();
     await portingEligibilityScreen.verifyPortingEligibilityScreenDisplayed();
@@ -42,7 +42,7 @@ describe('Porting Check Eligibility Screen Tests', () => {
     await driver.pause(2000); // Wait for validation
   });
 
-  it('TC003: Carrier selection from dropdown', async () => {
+  it('TC088: Carrier selection from dropdown', async () => {
     // Preconditions: User is on the Porting Check Eligibility screen
     await portingEligibilityScreen.launchApp();
     await portingEligibilityScreen.verifyPortingEligibilityScreenDisplayed();
@@ -57,7 +57,7 @@ describe('Porting Check Eligibility Screen Tests', () => {
     // Expected result: T-Mobile is selected and displayed in the carrier field
   });
 
-  it('TC004: Account number entry for porting eligibility', async () => {
+  it('TC089: Account number entry for porting eligibility', async () => {
     // Preconditions: User is on the Porting Check Eligibility screen
     await portingEligibilityScreen.launchApp();
     await portingEligibilityScreen.verifyPortingEligibilityScreenDisplayed();
@@ -74,7 +74,7 @@ describe('Porting Check Eligibility Screen Tests', () => {
     // Expected result: Account number is entered successfully and displayed correctly
   });
 
-  it('TC005: Complete porting eligibility check with valid data', async () => {
+  it('TC090: Complete porting eligibility check with valid data', async () => {
     // Preconditions: User is on the Porting Check Eligibility screen
     await portingEligibilityScreen.launchApp();
     await portingEligibilityScreen.verifyPortingEligibilityScreenDisplayed();
@@ -97,7 +97,7 @@ describe('Porting Check Eligibility Screen Tests', () => {
     // Expected result: System processes the request and displays eligibility status
   });
 
-  it('TC006: Empty phone number field validation', async () => {
+  it('TC091: Empty phone number field validation', async () => {
     // Preconditions: User is on the Porting Check Eligibility screen
     await portingEligibilityScreen.launchApp();
     await portingEligibilityScreen.verifyPortingEligibilityScreenDisplayed();
@@ -118,7 +118,7 @@ describe('Porting Check Eligibility Screen Tests', () => {
     // Expected result: System displays error message indicating phone number is required
   });
 
-  it('TC007: Empty account number field validation', async () => {
+  it('TC092: Empty account number field validation', async () => {
     // Preconditions: User is on the Porting Check Eligibility screen
     await portingEligibilityScreen.launchApp();
     await portingEligibilityScreen.verifyPortingEligibilityScreenDisplayed();
@@ -141,7 +141,7 @@ describe('Porting Check Eligibility Screen Tests', () => {
     // Expected result: System displays error message indicating account number is required
   });
 
-  it('TC008: Long press functionality on input fields', async () => {
+  it('TC093: Long press functionality on input fields', async () => {
     // Preconditions: User is on the Porting Check Eligibility screen
     await portingEligibilityScreen.launchApp();
     await portingEligibilityScreen.verifyPortingEligibilityScreenDisplayed();
@@ -163,7 +163,7 @@ describe('Porting Check Eligibility Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC016: Maximum character limit for phone number field', async () => {
+  it('TC094: Maximum character limit for phone number field', async () => {
     // Preconditions: User is on the Porting Check Eligibility screen
     await portingEligibilityScreen.launchApp();
     await portingEligibilityScreen.verifyPortingEligibilityScreenDisplayed();
@@ -181,7 +181,7 @@ describe('Porting Check Eligibility Screen Tests', () => {
     console.log('Phone number entered:', phoneValue);
   });
 
-  it('TC017: Special characters in account number field', async () => {
+  it('TC095: Special characters in account number field', async () => {
     // Preconditions: User is on the Porting Check Eligibility screen
     await portingEligibilityScreen.launchApp();
     await portingEligibilityScreen.verifyPortingEligibilityScreenDisplayed();

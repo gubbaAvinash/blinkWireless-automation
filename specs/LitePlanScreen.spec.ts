@@ -1,7 +1,7 @@
 import { litePlanScreen, litePlanLocators } from "../screen/LitePlanScreen.page";
 
 describe('Lite Plan Screen Tests', () => {
-  it('TC012: Add LITE plan to selection', async () => {
+  it('TC042: Add LITE plan to selection', async () => {
     // Preconditions: User is on plan selection screen with LITE plan available
     await litePlanScreen.navigateToLitePlanScreen();
     
@@ -17,7 +17,7 @@ describe('Lite Plan Screen Tests', () => {
     await litePlanScreen.verifyTotalPriceCalculation('$1,071.00');
   });
 
-  it('TC013: Remove LITE plan from selection', async () => {
+  it('TC043: Remove LITE plan from selection', async () => {
     // Preconditions: User has LITE plan added to selection
     await litePlanScreen.navigateToLitePlanScreen();
     await litePlanScreen.addLitePlan();
@@ -34,7 +34,7 @@ describe('Lite Plan Screen Tests', () => {
     await litePlanScreen.verifyTotalPriceCalculation('$1,015.00');
   });
 
-  it('TC014: Verify price calculation accuracy', async () => {
+  it('TC044: Verify price calculation accuracy', async () => {
     // Preconditions: User is on plan selection screen
     await litePlanScreen.navigateToLitePlanScreen();
     

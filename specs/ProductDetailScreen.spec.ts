@@ -1,7 +1,7 @@
 import { productDetailScreen, productDetailLocators } from "../screen/ProductDetailScreen.page";
 
 describe('Product Detail Screen Tests', () => {
-  it('TC001: Navigate back from product detail screen', async () => {
+  it('TC103: Navigate back from product detail screen', async () => {
     // Preconditions: User is on Xperia product detail screen
     await productDetailScreen.launchApp();
     
@@ -14,7 +14,7 @@ describe('Product Detail Screen Tests', () => {
     await driver.pause(2000); // Allow time for navigation
   });
 
-  it('TC002: Select black color variant', async () => {
+  it('TC104: Select black color variant', async () => {
     // Preconditions: User is on product detail screen with color options visible
     await productDetailScreen.launchApp();
     
@@ -27,7 +27,7 @@ describe('Product Detail Screen Tests', () => {
     await productDetailScreen.verifyColorSelection('black');
   });
 
-  it('TC003: Select purple color variant', async () => {
+  it('TC105: Select purple color variant', async () => {
     // Preconditions: User is on product detail screen with color options visible
     await productDetailScreen.launchApp();
     
@@ -40,7 +40,7 @@ describe('Product Detail Screen Tests', () => {
     await productDetailScreen.verifyColorSelection('purple');
   });
 
-  it('TC004: Switch between color variants', async () => {
+  it('TC106: Switch between color variants', async () => {
     // Preconditions: User is on product detail screen with multiple color options visible
     await productDetailScreen.launchApp();
     
@@ -58,7 +58,7 @@ describe('Product Detail Screen Tests', () => {
     await productDetailScreen.verifyColorSelection('purple');
   });
 
-  it('TC005: Initiate purchase process', async () => {
+  it('TC107: Initiate purchase process', async () => {
     // Preconditions: User is on product detail screen with Buy button visible
     await productDetailScreen.launchApp();
     
@@ -71,7 +71,7 @@ describe('Product Detail Screen Tests', () => {
     await driver.pause(3000); // Allow time for navigation
   });
 
-  it('TC006: Switch to Features tab', async () => {
+  it('TC108: Switch to Features tab', async () => {
     // Preconditions: User is on product detail screen with Overview tab active
     await productDetailScreen.launchApp();
     
@@ -84,7 +84,7 @@ describe('Product Detail Screen Tests', () => {
     await productDetailScreen.verifyTabActive('features');
   });
 
-  it('TC007: Switch back to Overview tab', async () => {
+  it('TC109: Switch back to Overview tab', async () => {
     // Preconditions: User is on product detail screen with Features tab active
     await productDetailScreen.launchApp();
     await productDetailScreen.switchToFeaturesTab();
@@ -98,7 +98,7 @@ describe('Product Detail Screen Tests', () => {
     await productDetailScreen.verifyTabActive('overview');
   });
 
-  it('TC008: View product image gallery', async () => {
+  it('TC110: View product image gallery', async () => {
     // Preconditions: User is on product detail screen with product images visible
     await productDetailScreen.launchApp();
     
@@ -111,7 +111,7 @@ describe('Product Detail Screen Tests', () => {
     await productDetailScreen.verifyPageIndicatorsUpdate();
   });
 
-  it('TC020: Verify rapid color selection changes', async () => {
+  it('TC111: Verify rapid color selection changes', async () => {
     // Preconditions: User is on product detail screen with color options
     await productDetailScreen.launchApp();
     

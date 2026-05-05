@@ -1,7 +1,7 @@
 import { simTypeScreen, simTypeScreenLocators } from "../screen/SimTypeScreen.page";
 
 describe('SIM Type Screen Tests', () => {
-  it('TC010: Select Physical SIM option', async () => {
+  it('TC115: Select Physical SIM option', async () => {
     // Preconditions: User is on SIM Type screen (3/5)
     await simTypeScreen.navigateToSimTypeScreen();
     
@@ -19,7 +19,7 @@ describe('SIM Type Screen Tests', () => {
     await expect(simTypeScreenLocators.physicalSimDescription()).toBeDisplayed();
   });
 
-  it('TC011: Select eSIM option', async () => {
+  it('TC116: Select eSIM option', async () => {
     // Preconditions: User is on SIM Type screen (3/5)
     await simTypeScreen.navigateToSimTypeScreen();
     
@@ -37,7 +37,7 @@ describe('SIM Type Screen Tests', () => {
     await expect(simTypeScreenLocators.esimDescription()).toBeDisplayed();
   });
 
-  it('TC012: Switch between SIM options', async () => {
+  it('TC117: Switch between SIM options', async () => {
     // Preconditions: User is on SIM Type screen
     await simTypeScreen.navigateToSimTypeScreen();
     
@@ -58,7 +58,7 @@ describe('SIM Type Screen Tests', () => {
     await driver.pause(1000);
   });
 
-  it('TC013: Continue with selected SIM type', async () => {
+  it('TC118: Continue with selected SIM type', async () => {
     // Preconditions: User is on SIM Type screen, A SIM type is selected
     await simTypeScreen.navigateToSimTypeScreen();
     
@@ -76,7 +76,7 @@ describe('SIM Type Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC014: Continue without selecting SIM type', async () => {
+  it('TC119: Continue without selecting SIM type', async () => {
     // Preconditions: User is on SIM Type screen, No SIM type is selected
     await simTypeScreen.navigateToSimTypeScreen();
     

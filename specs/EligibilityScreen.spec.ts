@@ -1,7 +1,7 @@
 import { eligibilityScreen, eligibilityScreenLocators } from "../screen/EligibilityScreen.page";
 
 describe('Eligibility Screen Tests', () => {
-  it('TC019: Enter Mobile Number for Eligibility Check', async () => {
+  it('TC030: Enter Mobile Number for Eligibility Check', async () => {
     // Preconditions: User is on eligibility check screen
     await eligibilityScreen.navigateToEligibilityScreen();
     
@@ -14,7 +14,7 @@ describe('Eligibility Screen Tests', () => {
     await expect(eligibilityScreenLocators.mobileNumberField()).toHaveText('555-123-4567');
   });
 
-  it('TC020: Enter Invalid Mobile Number', async () => {
+  it('TC031: Enter Invalid Mobile Number', async () => {
     // Preconditions: User is on eligibility check screen
     await eligibilityScreen.navigateToEligibilityScreen();
     
@@ -30,7 +30,7 @@ describe('Eligibility Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC021: Check Eligibility with Valid Data', async () => {
+  it('TC032: Check Eligibility with Valid Data', async () => {
     // Preconditions: User is on eligibility check screen, Valid mobile number is entered
     await eligibilityScreen.navigateToEligibilityScreen();
     
@@ -45,7 +45,7 @@ describe('Eligibility Screen Tests', () => {
     await driver.pause(3000);
   });
 
-  it('TC022: Check Eligibility with Empty Fields', async () => {
+  it('TC033: Check Eligibility with Empty Fields', async () => {
     // Preconditions: User is on eligibility check screen
     await eligibilityScreen.navigateToEligibilityScreen();
     
@@ -60,7 +60,7 @@ describe('Eligibility Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC023: Close Screen Navigation', async () => {
+  it('TC034: Close Screen Navigation', async () => {
     // Preconditions: User is on a screen with close button
     await eligibilityScreen.navigateToEligibilityScreen();
     
@@ -73,7 +73,7 @@ describe('Eligibility Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC024: Long Press on Mobile Number Field', async () => {
+  it('TC035: Long Press on Mobile Number Field', async () => {
     // Preconditions: User is on eligibility check screen
     await eligibilityScreen.navigateToEligibilityScreen();
     

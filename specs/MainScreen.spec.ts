@@ -1,7 +1,7 @@
 import { mainScreen, mainScreenLocators } from "../screen/MainScreen.page";
 
 describe('Main Screen Tests', () => {
-  it('TC003: Navigate to login screen', async () => {
+  it('TC045: Navigate to login screen', async () => {
     // Preconditions: BlinkWireless app is launched, Main screen is displayed
     await mainScreen.launchApp();
     
@@ -16,7 +16,7 @@ describe('Main Screen Tests', () => {
     // Note: Login screen verification would be implemented in LoginScreen.ts
   });
 
-  it('TC004: Navigate to phone shopping catalog', async () => {
+  it('TC046: Navigate to phone shopping catalog', async () => {
     // Preconditions: BlinkWireless app is launched, Main screen is displayed
     await mainScreen.launchApp();
     await mainScreen.verifyMainScreenDisplayed();
@@ -32,7 +32,7 @@ describe('Main Screen Tests', () => {
     // Note: Phone catalog screen verification would be implemented in PhoneCatalogScreen.ts
   });
 
-  it('TC005: Navigate to BYOP service page', async () => {
+  it('TC047: Navigate to BYOP service page', async () => {
     // Preconditions: BlinkWireless app is launched, Main screen is displayed
     await mainScreen.launchApp();
     await mainScreen.verifyMainScreenDisplayed();
@@ -48,7 +48,7 @@ describe('Main Screen Tests', () => {
     // Note: BYOP screen verification would be implemented in BYOPScreen.ts
   });
 
-  it('TC006: Navigate to broadband services catalog', async () => {
+  it('TC048: Navigate to broadband services catalog', async () => {
     // Preconditions: BlinkWireless app is launched, Main screen is displayed
     await mainScreen.launchApp();
     await mainScreen.verifyMainScreenDisplayed();

@@ -1,7 +1,7 @@
 import { pricePlanScreen, pricePlanLocators } from "../screen/PricePlanScreen.page";
 
 describe('Price Plan Screen Tests', () => {
-  it('TC009: Cancel price plan selection', async () => {
+  it('TC096: Cancel price plan selection', async () => {
     // Preconditions: User is on price plan selection screen
     await pricePlanScreen.navigateToPricePlan();
     
@@ -14,7 +14,7 @@ describe('Price Plan Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC010: Select BASIC plan', async () => {
+  it('TC097: Select BASIC plan', async () => {
     // Preconditions: User is on price plan selection screen with BASIC plan visible
     await pricePlanScreen.navigateToPricePlan();
     
@@ -27,7 +27,7 @@ describe('Price Plan Screen Tests', () => {
     await pricePlanScreen.verifyBasicPlanSelected();
   });
 
-  it('TC011: Continue with selected plan', async () => {
+  it('TC098: Continue with selected plan', async () => {
     // Preconditions: User has selected a price plan
     await pricePlanScreen.navigateToPricePlan();
     await pricePlanScreen.selectBasicPlan();
@@ -42,7 +42,7 @@ describe('Price Plan Screen Tests', () => {
     await driver.pause(3000);
   });
 
-  it('TC015: Attempt to continue without plan selection', async () => {
+  it('TC099: Attempt to continue without plan selection', async () => {
     // Preconditions: User is on plan selection screen with no plan selected
     await pricePlanScreen.navigateToPricePlan();
     
@@ -55,7 +55,7 @@ describe('Price Plan Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC016: Verify wizard progress indicator', async () => {
+  it('TC100: Verify wizard progress indicator', async () => {
     // Preconditions: User is in the purchase wizard flow
     await pricePlanScreen.navigateToPricePlan();
     
@@ -66,7 +66,7 @@ describe('Price Plan Screen Tests', () => {
     await pricePlanScreen.verifyProgressIndicator();
   });
 
-  it('TC017: Verify plan feature information display', async () => {
+  it('TC101: Verify plan feature information display', async () => {
     // Preconditions: User is viewing plan options
     await pricePlanScreen.navigateToPricePlan();
     
@@ -77,7 +77,7 @@ describe('Price Plan Screen Tests', () => {
     await pricePlanScreen.verifyPlanFeatures();
   });
 
-  it('TC018: Verify recommended plan indication', async () => {
+  it('TC102: Verify recommended plan indication', async () => {
     // Preconditions: User is viewing plan options with recommended badge
     await pricePlanScreen.navigateToPricePlan();
     

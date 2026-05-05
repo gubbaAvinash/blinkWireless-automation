@@ -1,7 +1,7 @@
 import { personalDetailsScreen, personalDetailsScreenLocators } from "../screen/PersonalDetailsScreen.page";
 
 describe('Personal Details Screen Tests', () => {
-  it('TC015: Enter valid personal details', async () => {
+  it('TC078: Enter valid personal details', async () => {
     // Preconditions: User is on Personal Details screen (4/6)
     await personalDetailsScreen.navigateToPersonalDetailsScreen();
     
@@ -24,7 +24,7 @@ describe('Personal Details Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC016: Enter invalid email format', async () => {
+  it('TC079: Enter invalid email format', async () => {
     // Preconditions: User is on Personal Details screen
     await personalDetailsScreen.navigateToPersonalDetailsScreen();
     
@@ -47,7 +47,7 @@ describe('Personal Details Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC017: Enter invalid phone number', async () => {
+  it('TC080: Enter invalid phone number', async () => {
     // Preconditions: User is on Personal Details screen
     await personalDetailsScreen.navigateToPersonalDetailsScreen();
     
@@ -70,7 +70,7 @@ describe('Personal Details Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC018: Leave required fields empty', async () => {
+  it('TC081: Leave required fields empty', async () => {
     // Preconditions: User is on Personal Details screen
     await personalDetailsScreen.navigateToPersonalDetailsScreen();
     
@@ -88,7 +88,7 @@ describe('Personal Details Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC019: Edit pre-filled personal details', async () => {
+  it('TC082: Edit pre-filled personal details', async () => {
     // Preconditions: User is on Personal Details screen with pre-filled data
     await personalDetailsScreen.navigateToPersonalDetailsScreen();
     
@@ -111,7 +111,7 @@ describe('Personal Details Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC020: Long press on input fields', async () => {
+  it('TC083: Long press on input fields', async () => {
     // Preconditions: User is on Personal Details screen with text in fields
     await personalDetailsScreen.navigateToPersonalDetailsScreen();
     
@@ -129,7 +129,7 @@ describe('Personal Details Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC023: Test maximum character limits in input fields', async () => {
+  it('TC084: Test maximum character limits in input fields', async () => {
     // Preconditions: User is on Personal Details screen
     await personalDetailsScreen.navigateToPersonalDetailsScreen();
     
@@ -151,7 +151,7 @@ describe('Personal Details Screen Tests', () => {
     await driver.pause(2000);
   });
 
-  it('TC024: Test special characters in input fields', async () => {
+  it('TC085: Test special characters in input fields', async () => {
     // Preconditions: User is on Personal Details screen
     await personalDetailsScreen.navigateToPersonalDetailsScreen();
     

@@ -1,5 +1,5 @@
 import { shopPhonesScreen } from "./ShopPhonesScreen.page";
-import { xperiaDetailLocators } from "./XperiaDetailScreen.page";
+// import { xperiaDetailLocators } from "./XperiaDetailScreen.page";
 
 const xperiaDetailLocators = {
   pageTitle: () => $('~mobile_navbar1_title'),

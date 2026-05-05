@@ -1,7 +1,7 @@
 import { xperiaDetailScreen, xperiaDetailLocators } from "../screen/XperiaDetailScreen.page";
 
 describe('Xperia Product Detail Screen Tests', () => {
-  it('TC012: Storage option selection on product detail page', async () => {
+  it('TC123: Storage option selection on product detail page', async () => {
     // Preconditions: User is on Xperia product detail page
     await xperiaDetailScreen.navigateToXperiaDetail();
     await xperiaDetailScreen.verifyXperiaDetailScreenDisplayed();
@@ -24,7 +24,7 @@ describe('Xperia Product Detail Screen Tests', () => {
     // Expected result: Storage options can be selected and price updates reflect the selection
   });
 
-  it('TC013: Tab navigation between Overview and Features', async () => {
+  it('TC124: Tab navigation between Overview and Features', async () => {
     // Preconditions: User is on Xperia product detail page
     await xperiaDetailScreen.navigateToXperiaDetail();
     await xperiaDetailScreen.verifyXperiaDetailScreenDisplayed();
@@ -49,7 +49,7 @@ describe('Xperia Product Detail Screen Tests', () => {
     // Expected result: Tab content switches appropriately between Overview and Features
   });
 
-  it('TC014: Buy button functionality', async () => {
+  it('TC125: Buy button functionality', async () => {
     // Preconditions: User is on Xperia product detail page with selections made
     await xperiaDetailScreen.navigateToXperiaDetail();
     await xperiaDetailScreen.verifyXperiaDetailScreenDisplayed();
@@ -69,7 +69,7 @@ describe('Xperia Product Detail Screen Tests', () => {
     // Expected result: Purchase process begins with selected product configuration
   });
 
-  it('TC015: Price display validation for different storage options', async () => {
+  it('TC126: Price display validation for different storage options', async () => {
     // Preconditions: User is on Xperia product detail page
     await xperiaDetailScreen.navigateToXperiaDetail();
     await xperiaDetailScreen.verifyXperiaDetailScreenDisplayed();
@@ -94,7 +94,7 @@ describe('Xperia Product Detail Screen Tests', () => {
     // Expected result: Price accurately reflects the selected storage configuration
   });
 
-  it('TC018: Image carousel navigation on product detail page', async () => {
+  it('TC127: Image carousel navigation on product detail page', async () => {
     // Preconditions: User is on Xperia product detail page
     await xperiaDetailScreen.navigateToXperiaDetail();
     await xperiaDetailScreen.verifyXperiaDetailScreenDisplayed();
@@ -117,7 +117,7 @@ describe('Xperia Product Detail Screen Tests', () => {
     // Expected result: Image carousel navigates smoothly with swipe gestures and indicators update correctly
   });
 
-  it('TC019: SIM compatibility information display', async () => {
+  it('TC128: SIM compatibility information display', async () => {
     // Preconditions: User is on Xperia product detail page
     await xperiaDetailScreen.navigateToXperiaDetail();
     await xperiaDetailScreen.verifyXperiaDetailScreenDisplayed();
@@ -132,7 +132,7 @@ describe('Xperia Product Detail Screen Tests', () => {
     // Expected result: SIM compatibility information is clearly visible and informative
   });
 
-  it('TC020: Multiple rapid taps on Buy button', async () => {
+  it('TC129: Multiple rapid taps on Buy button', async () => {
     // Preconditions: User is on Xperia product detail page
     await xperiaDetailScreen.navigateToXperiaDetail();
     await xperiaDetailScreen.verifyXperiaDetailScreenDisplayed();

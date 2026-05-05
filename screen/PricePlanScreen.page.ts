@@ -1,4 +1,4 @@
-import { pricePlanLocators } from "./PricePlanScreen.page";
+// import { pricePlanLocators } from "./PricePlanScreen.page";
 import { productDetailScreen } from "./ProductDetailScreen.page";
 
 const pricePlanLocators = {
