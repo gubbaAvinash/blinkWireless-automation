@@ -23,6 +23,7 @@ const addressScreenLocators = {
 
 class AddressScreen {
   async launchApp() {
+    await driver.terminateApp('com.wavemaker.turbomobiles');
     await driver.activateApp('com.wavemaker.turbomobiles');
     await driver.pause(2000);
   }

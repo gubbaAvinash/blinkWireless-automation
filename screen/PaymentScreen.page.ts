@@ -13,6 +13,7 @@ const paymentScreenLocators = {
 
 class PaymentScreen {
   async launchApp() {
+    await driver.terminateApp('com.wavemaker.turbomobiles');
     await driver.activateApp('com.wavemaker.turbomobiles');
     await driver.pause(2000);
   }

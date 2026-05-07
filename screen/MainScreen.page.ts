@@ -1,6 +1,6 @@
 const mainScreenLocators = {
   blinkWirelessLogo: () => $('~pictureLogo_picture'),
-  loginButton: () => $('~anchorLogin_caption'),
+  loginButton: () => $('//android.widget.TextView[@content-desc="anchorLogin_caption"]'),
   iphoneImage: () => $('~pictureMobile_picture'),
   oneStopShopHeading: () => $('~labelMain_caption'),
   findCompareText: () => $('~labelSubtext_caption'),
@@ -13,6 +13,7 @@ const mainScreenLocators = {
 
 class MainScreen {
   async launchApp() {
+    await driver.terminateApp('com.wavemaker.turbomobiles');
     await driver.activateApp('com.wavemaker.turbomobiles');
     await driver.pause(2000);
   }

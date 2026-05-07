@@ -1,5 +1,3 @@
-import { notificationPermissionLocators } from "./NotificationPermissionScreen.page";
-
 const notificationPermissionLocators = {
   permissionMessage: () => $('//android.widget.TextView[@resource-id="com.android.permissioncontroller:id/permission_message"]'),
   bellIcon: () => $('//android.widget.ImageView[@resource-id="com.android.permissioncontroller:id/permission_icon"]'),
@@ -9,6 +7,7 @@ const notificationPermissionLocators = {
 
 class NotificationPermissionScreen {
   async launchApp() {
+    await driver.terminateApp('com.wavemaker.turbomobiles');
     await driver.activateApp('com.wavemaker.turbomobiles');
     await driver.pause(2000);
   }

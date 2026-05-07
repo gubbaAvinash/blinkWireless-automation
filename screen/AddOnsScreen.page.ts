@@ -22,6 +22,7 @@ const addOnsScreenLocators = {
 
 class AddOnsScreen {
   async launchApp() {
+    await driver.terminateApp('com.wavemaker.turbomobiles');
     await driver.activateApp('com.wavemaker.turbomobiles');
     await addOnsScreenLocators.addOnsTitle().waitForDisplayed({ timeout: 10000 });
   }

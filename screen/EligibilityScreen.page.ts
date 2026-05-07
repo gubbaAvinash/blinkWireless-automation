@@ -6,6 +6,7 @@ const eligibilityScreenLocators = {
 
 class EligibilityScreen {
   async launchApp() {
+    await driver.terminateApp('com.wavemaker.turbomobiles');
     await driver.activateApp('com.wavemaker.turbomobiles');
     await driver.pause(2000);
   }
@@ -38,9 +39,11 @@ class EligibilityScreen {
   }
 
   async longPressMobileNumberField() {
-    await eligibilityScreenLocators.mobileNumberField().waitForDisplayed();
-    await driver.touchAction([
-      { action: 'longPress', element: eligibilityScreenLocators.mobileNumberField() }
+    const field = eligibilityScreenLocators.mobileNumberField();
+    await field.waitForDisplayed();
+    const { width, height } = await field.getSize();
+    await field.touchAction([
+      { action: 'longPress', x: Math.round(width / 2), y: Math.round(height / 2) },
     ]);
   }
 

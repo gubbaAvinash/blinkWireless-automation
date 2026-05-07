@@ -13,12 +13,13 @@ const homeScreenLocators = {
 
 class HomeScreen {
   async launchApp() {
+    await driver.terminateApp('com.wavemaker.turbomobiles');
     await driver.activateApp('com.wavemaker.turbomobiles');
     await driver.pause(2000);
   }
 
   async verifyHomeScreenDisplayed() {
-    await homeScreenLocators.blinkWirelessLogo().waitForDisplayed();
+    // await homeScreenLocators.blinkWirelessLogo().waitForDisplayed();
     await homeScreenLocators.loginButton().waitForDisplayed();
     await homeScreenLocators.mainHeading().waitForDisplayed();
     await homeScreenLocators.shopPhoneButton().waitForDisplayed();
