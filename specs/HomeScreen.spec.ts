@@ -1,5 +1,5 @@
 import { homeScreen, homeScreenLocators } from "../screen/HomeScreen.page";
-import { loginScreen } from "../screen/loginScreen.page";
+import { loginScreen } from "../screen/LoginScreen.page";
 
 describe('Home Screen Tests', () => {
   // it('TC037: Home screen is displayed', async () => {

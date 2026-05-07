@@ -22,6 +22,8 @@
     "test:home:bs": "sh -c 'npm run report:clean; wdio run wdio.browserstack.conf.js --spec specs/HomeScreen.spec.ts; status=$?; npm run report:generate; exit $status'",
     "test:lite-plan": "sh -c 'npm run report:clean; wdio run wdio.conf.js --spec specs/LitePlanScreen.spec.ts; status=$?; npm run report:generate; exit $status'",
     "test:lite-plan:bs": "sh -c 'npm run report:clean; wdio run wdio.browserstack.conf.js --spec specs/LitePlanScreen.spec.ts; status=$?; npm run report:generate; exit $status'",
+    "test:login": "sh -c 'npm run report:clean; wdio run wdio.conf.js --spec specs/LoginScreen.spec.ts; status=$?; npm run report:generate; exit $status'",
+    "test:login:bs": "sh -c 'npm run report:clean; wdio run wdio.browserstack.conf.js --spec specs/LoginScreen.spec.ts; status=$?; npm run report:generate; exit $status'",
     "test:main": "sh -c 'npm run report:clean; wdio run wdio.conf.js --spec specs/MainScreen.spec.ts; status=$?; npm run report:generate; exit $status'",
     "test:main:bs": "sh -c 'npm run report:clean; wdio run wdio.browserstack.conf.js --spec specs/MainScreen.spec.ts; status=$?; npm run report:generate; exit $status'",
     "test:notification-permission": "sh -c 'npm run report:clean; wdio run wdio.conf.js --spec specs/NotificationPermissionScreen.spec.ts; status=$?; npm run report:generate; exit $status'",

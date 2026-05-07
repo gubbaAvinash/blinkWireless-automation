@@ -1,19 +1,14 @@
 import { homeScreenLocators } from "./HomeScreen.page";
 
 const loginScreenLocators = {
-  // Login screen specific locators would be defined here based on actual login screen elements
-  // For now, using placeholder selectors as actual login screen elements are not provided
-  loginForm: () => $('//android.widget.LinearLayout[@resource-id="loginForm"]'),
-  usernameField: () => $('//android.widget.EditText[@resource-id="username"]'),
-  passwordField: () => $('//android.widget.EditText[@resource-id="password"]'),
+  emailField: () => $('//android.widget.EditText[@content-desc="name_i"]'),
   submitButton: () => $('//android.widget.Button[@text="Submit"]'),
-  backButton: () => $('//android.widget.Button[@content-desc="Navigate up"]')
+  emailValidationErrorMsg: () => $('//android.widget.TextView[@content-desc="emailaddress_error_msg"]'),
 };
 
 class LoginScreen {
   async launchApp() {
-    await driver.activateApp('com.wavemaker.turbomobiles');
-    await homeScreenLocators.blinkWirelessLogo().waitForDisplayed({ timeout: 10000 });
+    await driver.activateApp("com.wavemaker.turbomobiles");
   }
 
   async navigateToLogin() {
@@ -23,19 +18,21 @@ class LoginScreen {
   }
 
   async verifyLoginScreenDisplayed() {
-    await loginScreenLocators.loginForm().waitForDisplayed({ timeout: 5000 });
-    await expect(loginScreenLocators.loginForm()).toBeDisplayed();
+    await loginScreenLocators.emailField().waitForDisplayed({ timeout: 5000 });
+    await expect(loginScreenLocators.emailField()).toBeDisplayed();
   }
 
-  async enterCredentials(username: string, password: string) {
-    await loginScreenLocators.usernameField().waitForDisplayed();
-    await loginScreenLocators.usernameField().setValue(username);
-    await loginScreenLocators.passwordField().setValue(password);
-  }
-
-  async tapSubmitButton() {
+  async enterCredentialsAndSubmit(email: string) {
+    await driver.hideKeyboard();
+    await loginScreenLocators.emailField().waitForDisplayed();
+    await loginScreenLocators.emailField().setValue(email);
+    await driver.hideKeyboard();
     await loginScreenLocators.submitButton().waitForDisplayed();
     await loginScreenLocators.submitButton().click();
+  }
+
+  getEmailValidationError() {
+    return loginScreenLocators.emailValidationErrorMsg();
   }
 }
 
